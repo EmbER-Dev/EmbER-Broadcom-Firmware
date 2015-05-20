@@ -3,7 +3,7 @@
 
 kernel_version=`uname -r`
 wifi_type=`cat /etc/bcm_wifi`
-lib_path="/lib/modules/$kernel_version/kernel/drivers/amlogic/wifi"
+lib_path="/lib/modules/$kernel_version/kernel/drivers/amlogic/wifi/broadcom/ap6xxx"
 echo "wifi_type=$wifi_type"
 echo "lib_path=$lib_path"
 
