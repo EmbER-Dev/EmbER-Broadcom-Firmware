@@ -1,0 +1,14 @@
+#!/bin/sh
+###############################################################################
+# 50-bcmfix-script - This script corrects Broadcom WIFI MAC address
+# Written By: Corey Moyer (croniccorey)
+# Date Written: 2015-06-24
+###############################################################################
+
+MAC=$(cat /sys/class/net/wlan0/address)
+BAD_MAC=00:90:4c:11:22:33
+
+if [ "$MAC" == "$BAD_MAC" ]; then
+    nmcli radio wifi off
+    nmcli radio wifi on
+fi

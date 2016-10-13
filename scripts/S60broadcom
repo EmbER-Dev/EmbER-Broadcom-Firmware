@@ -1,0 +1,19 @@
+#! /bin/sh
+
+case "$1" in
+	start)
+		echo "Starting wifi..."
+		modprobe dhd
+	;;
+	stop)
+		echo "Stopping wifi..."
+		modprobe -r dhd
+	;;
+	restart|reload)
+		echo "Restarting wifi..."
+		modprobe -r dhd
+		modprobe dhd
+	;;
+	*)
+	;;
+esac
